@@ -1,0 +1,67 @@
+<div class="modal fade md-mqtt" id="md-mqtt" tabindex="-2" role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                          </button>
+                <h4 class="modal-title" id="">Configurações</h4>
+            </div>
+            <div class="modal-body">
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="md-mqtt-descricao">Descrição<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="md-mqtt-descricao" name="md-mqtt-descricao" required="required" class="form-control col-md-7 col-xs-12"
+                                tabindex="1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="md-mqtt-servidor">Endereço do Servidor <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="md-mqtt-servidor" name="md-mqtt-servidor" required="required" class="form-control col-md-7 col-xs-12"
+                                tabindex="2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="md-mqtt-login" class="control-label col-md-3 col-sm-3 col-xs-12">Login</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="md-mqtt-login" name="md-mqtt-login" class="form-control col-md-7 col-xs-12" type="text" tabindex="3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="md-mqtt-senha" class="control-label col-md-3 col-sm-3 col-xs-12">Senha</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="md-mqtt-senha" name="md-mqtt-senha" class="form-control col-md-7 col-xs-12" type="password" tabindex="4">
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                            <button class="btn btn-primary" type="button" data-dismiss="modal" tabindex="5">Cancelar</button>
+                            <button class="btn btn-primary" type="reset" tabindex="6">Limpar Campos</button>
+                            <button type="submit" class="btn btn-success" tabindex="7">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--<div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#md-mqtt').on('shown.bs.modal', function () {
+        $('#md-mqtt-descricao').focus();
+        $(".nav-sm .container.body .col-md-3.left_col").css('z-index', 1);
+    });
+
+    $('#md-mqtt').on('hidden.bs.modal', function () {
+        $(".nav-sm .container.body .col-md-3.left_col").css('z-index', 9999);
+    });
+
+</script>

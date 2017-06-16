@@ -3,16 +3,5 @@ $(document).ready(function () {
     if (window.matchMedia('(min-width: 992px)').matches) {
         $('#menu_toggle').click();
     }
-    $(window).on('hashchange', function () {
-        $("#conteudo").html("");
-        if (window.location.hash == "#mqtt") {
-            $("#conteudo").load("componentes/mqtt.html", function(){
-                carregado();
-            });
-        }
-    });
+    initPageTrigger();
 });
-
-window.onload = function () {
-    history.pushState('', document.title, window.location.pathname);
-}
