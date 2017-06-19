@@ -13,7 +13,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" id="md-mqtt-descricao" name="md-mqtt-descricao" required="required" class="form-control col-md-7 col-xs-12"
-                                tabindex="1">
+                                tabindex="1" value="{{ mqtt_descricao }}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -21,13 +21,14 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" id="md-mqtt-servidor" name="md-mqtt-servidor" required="required" class="form-control col-md-7 col-xs-12"
-                                tabindex="2">
+                                tabindex="2" value="{{ mqtt_servidor }}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="md-mqtt-login" class="control-label col-md-3 col-sm-3 col-xs-12">Login</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="md-mqtt-login" name="md-mqtt-login" class="form-control col-md-7 col-xs-12" type="text" tabindex="3">
+                            <input id="md-mqtt-login" name="md-mqtt-login" class="form-control col-md-7 col-xs-12" type="text" 
+                            tabindex="3">
                         </div>
                     </div>
                     <div class="form-group">
@@ -38,18 +39,16 @@
                     </div>
                     <div class="ln_solid"></div>
                     <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                            <button class="btn btn-primary" type="button" data-dismiss="modal" tabindex="5">Cancelar</button>
-                            <button class="btn btn-primary" type="reset" tabindex="6">Limpar Campos</button>
-                            <button type="submit" class="btn btn-success" tabindex="7">Enviar</button>
+                        <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-1">
+                            <button class="btn btn-primary col-lg-3 col-md-3 col-sm-3 col-xs-12" type="button" data-dismiss="modal" tabindex="5">Cancelar</button>
+                            <div class="visible-xs-block">&nbsp</div>
+                            <button class="btn btn-primary col-lg-3 col-md-3 col-sm-4 col-xs-12" type="reset" tabindex="6">Limpar Campos</button>
+                            <div class="visible-xs-block">&nbsp</div>
+                            <button class="btn btn-success col-lg-3 col-md-3 col-sm-3 col-xs-12" type="submit" tabindex="7">Enviar</button>
                         </div>
                     </div>
                 </form>
             </div>
-            <!--<div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>-->
         </div>
     </div>
 </div>

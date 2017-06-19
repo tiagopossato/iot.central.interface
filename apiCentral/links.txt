@@ -1,0 +1,5 @@
+https://ultimatedjango.com/learn-django/lessons/create-the-login-template/
+https://docs.djangoproject.com/pt-br/1.11/topics/auth/customizing/#custom-users-and-the-built-in-auth-forms
+
+http://www.effectivedjango.com/tutorial/authzn.html
+
