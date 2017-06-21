@@ -4,10 +4,6 @@
 <html lang="pt-br">
 
 <head>
-    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">-->
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -25,7 +21,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    {% load static %}
+
     <link href="{% static 'gentelella/css/custom.min.css' %}" rel="stylesheet">
 </head>
 
@@ -64,7 +60,7 @@
             <!-- top navigation -->
             <div class="top_nav">
                 <div class="nav_menu">
-                    <nav>
+                    <nav role="navigation">
                         <div class="nav toggle">
                             <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                         </div>
@@ -88,11 +84,10 @@
             <!-- page content -->
             <div class="right_col" role="">
                 <div class="clearfix"></div>
-                <div id="conteudo">
+                <section role="main">
                     {% block content %} {% endblock %}
-                </div>
+                </section>
             </div>
-
             <!-- /page content -->
 
             <!-- footer content -->
