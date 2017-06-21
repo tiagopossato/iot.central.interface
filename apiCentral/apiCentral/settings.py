@@ -25,7 +25,9 @@ SECRET_KEY = '^zy%-=0!@ve_u-=rt7&9evhw1*z6umtx3p7tx4x9s1yj=0_kgo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'tiagopossato.pythonanywhere.com',
+]
 
 APPEND_SLASH=False
 
