@@ -23,29 +23,37 @@
 
   <!-- Custom Theme Style -->
   {% load static %}
-  <link href="{% static 'gentelella/css/custom.min.css' %}" rel="stylesheet">
+  <link href="{% static 'gentelella/css/custom.css' %}" rel="stylesheet">
 </head>
 
 <body class="login">
   <div>
     <div class="login_wrapper">
       <div class="animate form login_form">
-        <section class="login_content">
-          <form id="login-form" method="post" action="/login">
-            {% csrf_token %}
+        <section class="login_content" role="main">
+          <form id="login-form" method="post" action="/login" class="form-horizontal form-label-left">
             <h1>Administração da Central</h1>
-            <div>
-              <input id="id_username" name="username" type="text" class="form-control input-text" placeholder="Usuario" required="required"
-                accesskey="u" tabindex="1" autofocus/>
+            <div class="form-group">
+              <label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align:left;" for="id_username">Usuário<span class="required">*</span>
+                        </label>
+              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <input id="id_username" name="username" type="text" class="form-control input-text" placeholder="Usuario" required="required"
+                  accesskey="u" tabindex="1" autofocus/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3" style="text-align:left;" for="md-mqtt-descricao">Senha<span class="required">*</span>
+                        </label>
+              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <input id="id_password" name="password" type="password" class="form-control" placeholder="Senha" required="required" accesskey="s"
+                  tabindex="2" />
+              </div>
             </div>
             <div>
-              <input id="id_password" name="password" type="password" class="form-control" placeholder="Senha" required="required" accesskey="s"
-                tabindex="2" />
+              <input type="submit" value="Login" class="btn btn-lg submit col-md-12 col-sm-12 col-xs-12 col-lg-12" tabindex="3" />
             </div>
-            <div>
-              <input type="submit" value="Login" class="btn btn-default submit" tabindex="3" />
-            </div>
-            <input type="hidden" name="next" value="{{ next }}"/>
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}" />
             <div class="clearfix"></div>
           </form>
           {% if error %}

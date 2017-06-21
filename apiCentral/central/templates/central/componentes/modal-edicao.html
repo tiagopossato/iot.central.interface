@@ -7,7 +7,8 @@
                 <h4 class="modal-title" id="">Configurações</h4>
             </div>
             <div class="modal-body">
-                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                <form id="form-mqtt" method="post" action="" data-parsley-validate class="form-horizontal form-label-left">
+                    {% csrf_token %}
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="md-mqtt-descricao">Descrição<span class="required">*</span>
                         </label>
